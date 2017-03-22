@@ -123,8 +123,7 @@ text(s3d$xyz.convert(GMM_object_PCA$data[,1:3]), labels = rownames(PCA_Comp_Scal
 # Visualising heatmap of PCA components
 pheatmap(GMM_object_PCA$data[,1:5],color = colorRampPalette(c("navy", "white", "firebrick3"))(100),clustering_method = "ward.d2")
 
-write.table(Probability_Assignment, file="~/InfantSHHGrp3/NewSHH/Probabilities_Assignment.csv", sep=",")
-
+write.csv(Probability_Assignment, file="~/InfantSHHGrp3/NewSHH/Probabilities_Assignment.csv")
 #"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 # End
 ##################################################################################################
