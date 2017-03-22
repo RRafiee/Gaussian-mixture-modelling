@@ -121,7 +121,7 @@ s3d$plane3d(my.lm)
 text(s3d$xyz.convert(GMM_object_PCA$data[,1:3]), labels = rownames(PCA_Comp_Scaled_Centered$x), cex= 0.8, col = "black")
 
 # Visualising heatmap of PCA components
-pheatmap(GMM_object_PCA$data[,1:5],color = colorRampPalette(c("navy", "white", "firebrick3"))(100),clustering_method = "ward.d2")
+pheatmap(GMM_object_PCA$data[,1:5],color = colorRampPalette(c("navy", "white", "firebrick3"))(100),clustering_method = "ward.D2")
 
 write.csv(Probability_Assignment, file="~/InfantSHHGrp3/NewSHH/Probabilities_Assignment.csv")
 #"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
