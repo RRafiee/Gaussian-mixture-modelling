@@ -145,6 +145,16 @@ heatmap(AP_object_PCA)
 show(AP_object_PCA)
 AP_object_PCA
 
+# APResult object
+# 
+# Number of samples     =  51 
+# Number of iterations  =  129 
+# Input preference      =  -73914.21 
+# Sum of similarities   =  -234507 
+# Sum of preferences    =  -221742.6 
+# Net similarity        =  -456249.6 
+# Number of clusters    =  3 
+
 length(AP_object_PCA@clusters[[1]]) # n1=11
 length(AP_object_PCA@clusters[[2]]) # n2=22
 # n1+n2 = 33 (Group 2)
