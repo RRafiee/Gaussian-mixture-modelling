@@ -13,6 +13,7 @@
 library(mclust) # Gaussian Mixture Modelling package for Model-Based Clustering, Classification, and Density Estimation
 library(scatterplot3d)
 library(pheatmap)
+library(apcluster) # Affinity Propagation Clustering
 
 load("~/20KBetaValues_51InfantSHH.RData")    # 20,000 probes
 length(colnames(BetaValues_51Samples_20K))
@@ -124,6 +125,31 @@ text(s3d$xyz.convert(GMM_object_PCA$data[,1:3]), labels = rownames(PCA_Comp_Scal
 pheatmap(GMM_object_PCA$data[,1:5],color = colorRampPalette(c("navy", "white", "firebrick3"))(100),clustering_method = "ward.D2")
 
 write.csv(Probability_Assignment, file="~/Probabilities_Assignment.csv")
+
+
+################################################## AP clustering ###############################
+# Affinity Propagation clustering is used to confirm an aggreement/consensus with GMM+EM results
+
+# Affinity propagation (AP) is a relatively new clustering algorithm that has been introduced by
+# Brendan J. Frey and Delbert Dueck. The authors themselves describe affinity propagation as
+# follows:
+# “An algorithm that identifies exemplars among data points and forms clusters of data
+# points around these exemplars. It operates by simultaneously considering all data
+# point as potential exemplars and exchanging messages between data points until a
+# good set of exemplars and clusters emerges.”
+
+AP_object_PCA <- apcluster(negDistMat(r=2), PCA_Comp_Scaled_Centered$x[,1:5], q=0.0)
+cat("affinity propogation optimal number of clusters:", length(AP_object_PCA@clusters), "\n")
+plot(AP_object_PCA,GMM_object_PCA$data[,1:5])
+heatmap(AP_object_PCA)
+show(AP_object_PCA)
+AP_object_PCA
+
+length(AP_object_PCA@clusters[[1]]) # n1=11
+length(AP_object_PCA@clusters[[2]]) # n2=22
+# n1+n2 = 33 (Group 1)
+length(AP_object_PCA@clusters[[3]]) # n3=18 (Group 2)
+
 #"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 # End
 ##################################################################################################
