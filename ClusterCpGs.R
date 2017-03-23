@@ -165,10 +165,10 @@ AP_object_PCA
 # Cluster 3, exemplar NMB553:
 #   NMB200 NMB254 NMB272 NMB32 NMB324 NMB328 NMB363 NMB465 NMB471 NMB483 NMB497 NMB553 NMB594 NMB608 NMB621 NMB64 NMB676 NMB712
 
-length(AP_object_PCA@clusters[[1]]) # n1=11
-length(AP_object_PCA@clusters[[2]]) # n2=22
+length(AP_object_PCA@clusters[[1]]) # n1=11 (red colours)
+length(AP_object_PCA@clusters[[2]]) # n2=22 (green colours)
 # n1+n2 = 33 (Group 2)
-length(AP_object_PCA@clusters[[3]]) # n3=18 (Group 1)
+length(AP_object_PCA@clusters[[3]]) # n3=18 (Group 1; blue colours)
 
 #"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 # End
