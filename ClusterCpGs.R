@@ -147,8 +147,8 @@ AP_object_PCA
 
 length(AP_object_PCA@clusters[[1]]) # n1=11
 length(AP_object_PCA@clusters[[2]]) # n2=22
-# n1+n2 = 33 (Group 1)
-length(AP_object_PCA@clusters[[3]]) # n3=18 (Group 2)
+# n1+n2 = 33 (Group 2)
+length(AP_object_PCA@clusters[[3]]) # n3=18 (Group 1)
 
 #"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 # End
