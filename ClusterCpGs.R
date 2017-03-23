@@ -170,6 +170,11 @@ length(AP_object_PCA@clusters[[2]]) # n2=22 (green colours)
 # n1+n2 = 33 (Group 2)
 length(AP_object_PCA@clusters[[3]]) # n3=18 (Group 1; blue colours)
 
+# We could use all 20k probes in this clustering 
+# AP_object_20k <- apcluster(negDistMat(r=2), t(BetaValues_51Samples_20K), q=0.01)
+# cat("affinity propogation optimal number of clusters:", length(AP_object_20k@clusters), "\n")
+# affinity propogation optimal number of clusters: 2
+
 #"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 # End
 ##################################################################################################
