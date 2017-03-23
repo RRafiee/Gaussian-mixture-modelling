@@ -16,10 +16,10 @@ library(pheatmap)
 library(apcluster) # Affinity Propagation Clustering
 
 load("~/20KBetaValues_51InfantSHH.RData")    # 20,000 probes
-length(colnames(BetaValues_51Samples_20K))
+length(colnames(BetaValues_51Samples_20K))   # n=51
 
 # Performs a principal components analysis on the given data matrix and returns the results as an object of class prcomp
-PCA_Comp_Scaled_Centered <- prcomp(t(BetaValues_51Samples_20K), center = TRUE, scale=T)  # scale =T is better
+PCA_Comp_Scaled_Centered <- prcomp(t(BetaValues_51Samples_20K), center = TRUE, scale=T)  # scale =T is appropriate for high-dimensional omic data
 summary(PCA_Comp_Scaled_Centered)
 
 # Importance of components:
