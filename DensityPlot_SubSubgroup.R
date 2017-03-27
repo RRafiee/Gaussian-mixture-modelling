@@ -36,8 +36,6 @@ trapezoidal_integration = function(x, f)
 
 #=============================================================================================
 #=============================================================================================
-setwd("~/My Projects at NICR/2014/Infant/Our New Material")
-
 ## loading data
 data0_5 <- read.csv("Infant_2SubgroupInSHH.csv", header=T) # Paper, sub-subgroup density plot, March 2017
 
