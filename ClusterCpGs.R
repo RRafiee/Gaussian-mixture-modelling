@@ -60,6 +60,8 @@ Best_Num_of_Clusters <- dim(GMM_object_PCA$z)[2]
 cat("Model-based optimal number of clusters:", Best_Num_of_Clusters, "\n")
 # model-based optimal number of clusters: 2 clusters
 
+# show a matrix whose [i,k]th entry is the probability that observation i in the test data belongs to the kth class.
+GMM_object_PCA$z 
 
 # Resampling-based Inference for Gaussian finite mixture models
 # Bootstrap or jackknife estimation of standard errors and percentile bootstrap confidence intervals
