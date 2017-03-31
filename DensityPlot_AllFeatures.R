@@ -40,12 +40,12 @@ linear.density.plot <- function(present.score,not.present.score, condition, max.
   
 }
 
-setwd("~/My Projects at NICR/2014/Infant/Our New Material")
+setwd("~/")
 
 #### density plots
 
 # 31 March 2017
-data_Infant16 <- read.csv("New under 5 vs over 5 NMB DH210716 for Reza density plots DH310317.csv", header=T)  # 
+data_Infant16 <- read.csv("Under5vsOver5DensityPlots.csv", header=T)  # 
 data <- data_Infant16
 
 #### data stored in a list for each plot on the combined linear density plot
