@@ -1,1 +1,1 @@
-# Gaussian-mixture-modelling
+# Gaussian-mixture-modelling & density plot
