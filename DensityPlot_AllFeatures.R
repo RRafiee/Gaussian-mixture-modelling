@@ -27,8 +27,7 @@ linear.density.plot <- function(present.score,not.present.score, condition, max.
        bty="n",
        xaxt='n', ann=FALSE, yaxt='n'
   )
-  ##rect(xleft=0, xright=5, ybottom=0, ytop=10, density=50, col="grey", border = NA, angle = 135)
-  ##rect(xleft=5, xright=max.age, ybottom=0, ytop=10, density=10, col="grey", border = NA, angle = 135)
+
   lines(density(present.score)$x,density(present.score)$y*14, col = "blue")  #15
   axis(1,at=c(0,max.age),pos=0, tck=c(-0.1), labels = NA,lwd=1)
   axis(1,at=c(0,max.age),pos=0, tck=c(0.1), labels = NA,lwd=1)
@@ -144,15 +143,14 @@ names(density.plots)<-c("Male", #1
                         "iso17q")    #14
 
 names(density.plots)<- strrep(" ",1:14)    #14
+
 ##save(density.plots, file="~/My Projects at NICR/2014/Infant/Our New Material/density.plots_List20Var_14Jan16.rda")
 ##save(density.plots, file="~/My Projects at NICR/2014/Infant/Our New Material/density.plots_List16Var_08Jan16.rda")
-
 ###pdf(file="linear.density.plot.pdf")
 #load("~/My Projects at NICR/2014/Infant/Our New Material/density.plots_List16Var_08Jan16.rda")
 ###data <- read.csv(file = "Infant data current 0-16 DH050116_Ch17.csv")
 #load("~/My Projects at NICR/2014/Infant/Our New Material/density.plots_List20Var_14Jan16.rda")
 #data <- read.csv(file = "FOR DENSITY PLOT FIG 1 ONLY_DATA INFIDELITY Copy of Infant data current 0-16 DH140116.csv")
-
 
 max.age <- max(data_Infant16$Ageatdiagnosis, na.rm=TRUE)
 #max.age <- max(data$Ageatdiagnosis)
@@ -162,7 +160,6 @@ number.of.graphs <- 14
 #pdf(file="linear.density.plot14Jan2016_Final.pdf")
 
 par(mfrow=c(number.of.graphs,1),mar=c(0.5,10,0.5,5)) #original: mar=c(0.5,8,0.5,5)
-
 
 for(i in 1:14)
 { 
